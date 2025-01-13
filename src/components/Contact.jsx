@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; // Import toastify styles
 import axios from "axios";
 
 export const Contact = () => {
@@ -42,13 +44,16 @@ export const Contact = () => {
     try {
       await axios.post("https://backend-github-io-yikv.onrender.com/api/contact", formDetails);
       setStatus({ success: true, message: "Message sent successfully!" });
+      toast.success("Message sent successfully!"); // Success toast notification
       setFormDetails(formInitialDetails);
     } catch (error) {
       console.error("Error sending message:", error);
       setStatus({ success: false, message: "Failed to send message. Try again later." });
+      toast.error("Failed to send message. Try again later."); // Error toast notification
+    } finally {
+      setButtonText("Send");
     }
-  }     
- 
+  };
 
   return (
     <section className="contact" id="connect">
@@ -114,6 +119,7 @@ export const Contact = () => {
           </Col>
         </Row>
       </Container>
+      <ToastContainer />
     </section>
   );
 };
