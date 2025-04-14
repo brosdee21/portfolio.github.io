@@ -28,7 +28,7 @@ import navIcon3 from "../assets/img/nav-icon3.svg";
     return(
 <Navbar expand="lg" className={scrolled ? "scrolled": ""}>
  <Container>
-    <Navbar.Brand href="#home"><img src={logo} alt="Logo" style={{ width: "120px", height: "120px", borderRadius: "80%" }}/></Navbar.Brand>
+    <Navbar.Brand href="#home"><img src={logo} alt="Logo" style={{  width: "100px", height: "100px", borderRadius: "80%" }}/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav"><span className="navbar-toggler-icon"></span></Navbar.Toggle>
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="me-auto">
