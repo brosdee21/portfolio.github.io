@@ -7,7 +7,7 @@ import projImg3 from "../assets/img/Face recognition.png";
 import projImg4 from "../assets/img/Hotels.png";
 import projImg5 from "../assets/img/Music.png";
 import projImg6 from "../assets/img/Musics.png";
-import projImg7 from "../assets/img/bank app.png";
+import projImg7 from "../assets/img/Bank.png";
 import projImg8 from "../assets/img/bankproject.png";
 import projImg9 from "../assets/img/robofriends.png";
 import TrackVisibility from 'react-on-screen';
@@ -65,7 +65,7 @@ export const Projects = () => {
     
 
     return(
-        <section className="project" id="project">
+        <section className="project" id="projects">
             <Container>
               <Row>
                 <Col>

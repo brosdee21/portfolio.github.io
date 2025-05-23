@@ -109,6 +109,41 @@ nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
 nav.navbar .navbar-nav a.nav-link.navbar-link.active {
     opacity: 1;
 }
+.nav-link.connect-link {
+  position: relative;
+  display: inline-block;
+  border: 2px solid white;
+  color: white;
+  background-color: black;
+  /* border-radius: 25px; */
+  padding: 15px 15px;
+  overflow: hidden;
+  z-index: 0;
+  transition: color 0.3s ease;
+}
+
+.connect-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: -1;
+  transition: left 0.4s ease;
+  /* border-radius: 25px; */
+}
+
+.connect-link:hover::before {
+  left: 0;
+}
+
+.connect-link:hover {
+  color: black;
+}
+
+
 span.navbar-text {
     display: flex;
     align-items: center;

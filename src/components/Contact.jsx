@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { forwardRef, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; // Import toastify styles
+import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
 
-export const Contact = () => {
+export const Contact = forwardRef((props, ref) => {
   const formInitialDetails = {
     firstName: "",
     lastName: "",
@@ -29,13 +29,7 @@ export const Contact = () => {
     e.preventDefault();
     setButtonText("Sending...");
 
-    // Validate form fields
-    if (
-      !formDetails.firstName ||
-      !formDetails.lastName ||
-      !formDetails.email ||
-      !formDetails.message
-    ) {
+    if (!formDetails.firstName || !formDetails.lastName || !formDetails.email || !formDetails.message) {
       setStatus({ success: false, message: "Please fill out all fields." });
       setButtonText("Send");
       return;
@@ -44,19 +38,19 @@ export const Contact = () => {
     try {
       await axios.post("https://backend-github-io-yikv.onrender.com/api/contact", formDetails);
       setStatus({ success: true, message: "Message sent successfully!" });
-      toast.success("Message sent successfully!"); // Success toast notification
+      toast.success("Message sent successfully!");
       setFormDetails(formInitialDetails);
     } catch (error) {
       console.error("Error sending message:", error);
       setStatus({ success: false, message: "Failed to send message. Try again later." });
-      toast.error("Failed to send message. Try again later."); // Error toast notification
+      toast.error("Failed to send message. Try again later.");
     } finally {
       setButtonText("Send");
     }
   };
 
   return (
-    <section className="contact" id="connect">
+    <section className="contact" id="contact" ref={ref}>
       <Container>
         <Row className="align-items-center">
           <Col md={6}>
@@ -122,4 +116,4 @@ export const Contact = () => {
       <ToastContainer />
     </section>
   );
-};
+});
