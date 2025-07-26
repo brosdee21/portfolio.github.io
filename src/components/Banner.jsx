@@ -57,7 +57,6 @@ export const Banner = () => {
                                         {`Hi my name is Dennis I am a `}
                                         <span className="wrap">{text}</span>
                                     </h1>
-                                    <p>I am a MERN Stack Developer and DevOps Engineer</p>
                                     <button onClick={() => console.log('connect')}>
                                         Let's Connect <ArrowRightCircle size={25} />
                                     </button>
