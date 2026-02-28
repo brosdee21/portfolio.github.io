@@ -219,6 +219,25 @@ span.navbar-text {
 	height: 100%;
 	position: absolute;
 }
+
+.download {
+  font-weight: 700;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 18px 34px;
+  font-size: 18px;
+  width: 50%;
+	height: 9%;
+  margin-left: 18px;
+	position: relative;
+	background-color: transparent;
+	transition: 0.3s ease-in-out;
+}
+
+.download:hover {
+  background-color: #fff; /* Darker blue on hover */
+}
+
 nav.navbar .navbar-toggler:active,
 nav.navbar .navbar-toggler:focus {
 	outline: none;

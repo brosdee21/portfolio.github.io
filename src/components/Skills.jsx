@@ -36,7 +36,7 @@ export const Skills = () => {
                     <Col>
                         <div className="skill-bx">
                             <h2>Skills</h2>
-                            <p>HTML, CSS, Javascript, React.js</p>
+                            {/* <p>MERN Stack/Software Developer, DevOps Engineer, Java Programming, Computer Hardware, Artificial Intelligence/Machine Learning, System Analysis and Design, SDLC and Scrum Methodology</p> */}
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
                             <div className="item">
                                 <img src={meter1} alt="s" />
@@ -56,15 +56,15 @@ export const Skills = () => {
                                 </div>
                                 <div className="item">
                                 <img src={meter1} alt="s" />
-                                <h5>Artificial Intelligence</h5>
+                                <h5>Artificial Intelligence/Machine Learning</h5>
                                 </div>
                                 <div className="item">
                                 <img src={meter1} alt="s" />
-                                <h5>SYstem Analysis and Design</h5>
+                                <h5>System Analysis and Design</h5>
                                 </div>
                                 <div className="item">
                                 <img src={meter1} alt="s" />
-                                <h5>SDLC and Agile Methodology</h5>
+                                <h5>SDLC and Scrum Methodology</h5>
                                 </div>
                                 
                             </Carousel>
